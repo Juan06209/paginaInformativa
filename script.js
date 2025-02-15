@@ -22,10 +22,10 @@ for (let i = 0; i < count * 3; i += 3) {
     positions[i + 1] = radius * Math.sin(phi) * Math.sin(theta);
     positions[i + 2] = radius * Math.cos(phi);
 
-    // Asignar colores aleatorios con tonos de azul y violeta
-    colors[i] = 0.2 + Math.random() * 0.8;
-    colors[i + 1] = 0.1 + Math.random() * 0.4;
-    colors[i + 2] = 0.8 + Math.random() * 0.2;
+    // Asignar colores aleatorios con tonos de azul neón
+    colors[i] = 0.1; // Azul neón tiene poco rojo
+    colors[i + 1] = 0.1; // Azul neón tiene poco verde
+    colors[i + 2] = 1.0; // Azul neón tiene mucho azul
 }
 
 particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
@@ -90,7 +90,10 @@ document.querySelectorAll('.barra-navegacion a').forEach(link => {
         event.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-        targetSection.classList.add('visible');
+        document.getElementById('menu-hamburguesa').classList.remove('active');
+        document.getElementById('barra-navegacion').classList.remove('visible');
+        setTimeout(() => {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }, 300); // Esperar a que el menú se cierre antes de desplazarse
     });
 });
