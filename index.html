@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeniero Mecatrónico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script type="module" src="script.js"></script>
+
+    <!-- Menú hamburguesa -->
+    <div class="menu-hamburguesa" id="menu-hamburguesa">
+        <div class="linea"></div>
+        <div class="linea"></div>
+        <div class="linea"></div>
+    </div>
+
+    <!-- Barra de navegación -->
+    <nav id="barra-navegacion" class="barra-navegacion">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#blog">Blog</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#redes-sociales">Redes Sociales</a>
+        <a href="#curriculum-vitae">Currículum Vitae</a>
+        <a href="#certificaciones">Certificaciones</a>
+    </nav>
+
+    <!-- Contenido de la página -->
+    <div id="contenido">
+        <section id="inicio">
+            <div class="contenedor">
+                <h1>Bienvenido</h1>
+                <p>Ingeniero Mecatrónico</p>
+                <img src="ruta/a/imagen.jpg" alt="Imagen del Ingeniero">
+            </div>
+        </section>
+
+        <section id="sobre-mi">
+            <div class="contenedor">
+                <h2>Sobre mí</h2>
+                <p>Descripción detallada sobre la experiencia, educación, habilidades y logros del ingeniero.</p>
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <div class="contenedor">
+                <h2>Proyectos</h2>
+                <p>Descripción de proyectos destacados.</p>
+            </div>
+        </section>
+
+        <section id="servicios">
+            <div class="contenedor">
+                <h2>Servicios</h2>
+                <p>Información sobre los servicios ofrecidos.</p>
+            </div>
+        </section>
+
+        <section id="testimonios">
+            <div class="contenedor">
+                <h2>Testimonios</h2>
+                <p>Comentarios y opiniones de clientes o colegas.</p>
+            </div>
+        </section>
+
+        <section id="blog">
+            <div class="contenedor">
+                <h2>Blog</h2>
+                <p>Artículos y publicaciones sobre temas relevantes en mecatrónica.</p>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div class="contenedor">
+                <h2>Contacto</h2>
+                <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="redes-sociales">
+            <div class="contenedor">
+                <h2>Redes Sociales</h2>
+                <p>Enlaces a perfiles de redes sociales profesionales.</p>
+            </div>
+        </section>
+
+        <section id="curriculum-vitae">
+            <div class="contenedor">
+                <h2>Currículum Vitae</h2>
+                <a href="ruta/a/cv.pdf" download>Descargar CV</a>
+            </div>
+        </section>
+
+        <section id="certificaciones">
+            <div class="contenedor">
+                <h2>Certificaciones</h2>
+                <p>Lista de certificaciones y cursos relevantes completados.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('menu-hamburguesa').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.getElementById('barra-navegacion').classList.toggle('visible');
+        });
+    </script>
+</body>
+</html>
